@@ -2,6 +2,11 @@
 # Project Name
 Pedestrian Accidents  Project 3 
 
+## Data Location
+Source:  https://open.toronto.ca/dataset motor-vehicle-collisions-involving-killed-or-seriously-injured-persons/
+Data license: https://open.toronto.ca/open-data-license/
+
+
 ## General Information
 
 This project is a data visualization dashboard for Toronto pedestrian accidents. It aims to provide insights into pedestrian accident trends, locations, and factors such as road surface conditions.  In theory, this can be used by a police department to analyze the pedestrian-related accidents to determine how to reduce fatalities.
@@ -23,7 +28,7 @@ The project was undertaken to address the need for a user-friendly platform that
 - Jupyter notebook 
 - Leaflet 
 - MongoDB
-- Chart.js 
+- Chart.js (New library used)
 - D3.js 
 - HTML/CSS
 - JavaScript
