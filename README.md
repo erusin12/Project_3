@@ -139,7 +139,8 @@ fetch('Pedestrians.geojson')
  - George Kalad
 
 ## Data Sources & Resources
+- Source:  https://open.toronto.ca/dataset/motor-vehicle-collisions-involving-killed-or-seriously-injured-persons/
+- Data license: https://open.toronto.ca/open-data-license/
 
-
-for code troubleshooting : Instructor assistance ,Chatgpt,Blackbox,Google,Stackoverflow
+- for code troubleshooting : Instructor assistance ,Chatgpt,Blackbox,Google,Stackoverflow
 
