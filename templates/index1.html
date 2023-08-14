@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    /* Center the title */
+    .title-container {
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+
+<!-- Include Leaflet library -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+
+<!-- Include D3.js -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+<!-- Include your custom CSS -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+
+<body>
+  <div class="title-container">
+    <h1>Toronto Pedestrian Accidents</h1>
+  </div>
+
+
+<div id="yearDropdown">
+<!--   <label for="yearSelect">Select Year:</label> -->
+  <select id="yearSelect">
+    <option value="all"></option>
+    <!-- Options for years will be dynamically added using JavaScript -->
+  </select>
+</div>
+  
+  <!-- Your Leaflet map container -->
+  <div id="map"></div>
+
+
+  
+  <!-- Include Leaflet JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+  
+    <!-- JavaScript files -->
+  <script type="module" src="{{ url_for('static', filename='js/dashboard1.js') }}"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</body>
+
+</html>

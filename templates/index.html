@@ -1,40 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Toronto Pedestrian Accidents</title>
-
-<!-- Include Leaflet library -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-    crossorigin="" />
-
-  <!-- Our CSS -->
-  <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toronto Pedestrian Accidents Dashboard</title>
+    <!-- Include CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- Include Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 </head>
-
 <body>
-  <!-- Your Leaflet map container -->
-  <div id="map"></div>
+    <h1 id="title">Toronto Pedestrian Accidents Dashboard</h1>
+    <!-- The div that holds our map -->
+    <label for="yearFilter">Select Year Filter:</label>
+    <select id="yearFilter">
+        <option value="all">All Years</option>
+    </select>
+    <div id="map"></div>
+    <div id="lineChartContainer"></div>
+    <h1 id="title">Accidents by Month Data Visualization</h1>
+    <label for="year-dropdown">Select Year:</label>
+    <select id="year-dropdown"></select>
+    <div id="chart-container"></div>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <h1 id="title">Fatal Accidents by Road Conditions</h1>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <canvas id="donutChart" width="600" height="600"></canvas>  
+    <!-- Include Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- Include your JavaScript file -->
+    <script type="module" src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
 
-  <!-- Dropdown for selecting year -->
-  <select id="yearDropdown">
-    <!-- Options for years will be dynamically added using JavaScript -->
-  </select>
-
-  <!-- Your D3 line graph container -->
-  <div id="lineGraph"></div>
-
-  <!-- Include your JavaScript files at the end -->
-  <script type="module" src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
-
-  <!-- D3 JavaScript -->
-  <script src="https://d3js.org/d3.v7.min.js"></script>
 </body>
 </html>
